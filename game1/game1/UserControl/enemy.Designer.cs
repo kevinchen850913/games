@@ -1,6 +1,6 @@
 ﻿namespace game1
 {
-    partial class card
+    partial class enemy
     {
         /// <summary> 
         /// 設計工具所需的變數。
@@ -35,26 +35,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(66, 51);
+            this.label1.Location = new System.Drawing.Point(48, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // card
+            // enemy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.label1);
-            this.DoubleBuffered = true;
-            this.Name = "card";
-            this.Size = new System.Drawing.Size(201, 260);
-            this.Load += new System.EventHandler(this.card_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RealPlayWnd_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RealPlayWnd_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RealPlayWnd_MouseUp);
+            this.Name = "enemy";
+            this.Size = new System.Drawing.Size(200, 200);
+            this.Load += new System.EventHandler(this.enemy_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,16 +7,21 @@ using System.Threading.Tasks;
 
 namespace game1
 {
-    enum maincmds
+    public enum maincmds
     {
         移動卡片,
         打出卡片
     };
 
-    enum subcmd
+    public enum subcmd
     {
     };
 
+    public class BasicUnit
+    {
+        public string name;
+        public int hp;
+    }
     public class Cmd
     {
         public int maincmd;

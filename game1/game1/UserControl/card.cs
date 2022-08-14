@@ -57,5 +57,22 @@ namespace game1
                 this.Top += Convert.ToInt16(e.Y - yPos);//設定y座標.
             }
         }
+
+        private void RealPlayWnd_MouseEnter(object sender, EventArgs e)
+        {
+            this.Width = this.Width * 2;
+            this.Height = this.Height * 2;
+            this.Left -= this.Width / 4;
+            this.Top -= this.Height / 4;
+        }
+
+        private void RealPlayWnd_MouseLeave(object sender, EventArgs e)
+        {
+            this.Left += this.Width / 4;
+            this.Top += this.Height / 4;
+            this.Width = this.Width / 2;
+            this.Height = this.Height / 2;
+
+        }
     }
 }

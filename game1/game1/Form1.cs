@@ -15,6 +15,7 @@ namespace game1
         int HP = 100;
         card initcard = new card(0);
         List<card> mydeck = new List<card>();
+        List<enemy> enemys = new List<enemy>();
 
         public Form1()
         {
@@ -25,7 +26,10 @@ namespace game1
         {
             Loadmydeck();
             timer1.Enabled = true;
-            label1.Text = HP.ToString();
+            enemy enemy1 = new enemy();
+            enemy1.Location = new Point(700, 80);
+            Controls.Add(enemy1);
+            enemys.Add(enemy1);
         }
 
         private void Loadmydeck()
@@ -49,7 +53,7 @@ namespace game1
             foreach (card mycard in mydeck)
             {
                 mycard.Location = new Point(X, Y);
-                X = X + mycard.Size.Width + 10;
+                X = X + initcard.Size.Width + 10;
                 Controls.Add(mycard);  
             }
         }
@@ -85,7 +89,7 @@ namespace game1
                     break;
                 case (int)maincmds.打出卡片:
                     HP = HP - 10;
-                    label1.Text = HP.ToString();
+                    enemys[0].Injuried(10);
                     break;
             }
             timer1.Enabled = true;
